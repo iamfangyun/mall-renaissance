@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author weishanyuan
  * @since 2021-10-14
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.renaissance")
 public class AdminApp {
 
     public static void main(String[] args) {
