@@ -47,7 +47,10 @@
         <knife4j.version>2.0.4</knife4j.version>
         <nimbus-jose-jwt.version>8.16</nimbus-jose-jwt.version>
         <mall-common.version>1.0-SNAPSHOT</mall-common.version>
-        <mall-mbg.version>1.0-SNAPSHOT</mall-mbg.version>
+        <mall-entity.version>1.0-SNAPSHOT</mall-entity.version>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
+        <velocity-engine-core.version>2.3</velocity-engine-core.version>
     </properties>
 
     <dependencies>
@@ -99,15 +102,15 @@
             </dependency>
             <!--mall通用模块-->
             <dependency>
-                <groupId>com.macro.mall</groupId>
+                <groupId>com.renaissance</groupId>
                 <artifactId>mall-common</artifactId>
                 <version>${mall-common.version}</version>
             </dependency>
-            <!--mall中MBG生成模块-->
+            <!--mall中entity模块-->
             <dependency>
-                <groupId>com.macro.mall</groupId>
-                <artifactId>mall-mbg</artifactId>
-                <version>${mall-mbg.version}</version>
+                <groupId>com.renaissance</groupId>
+                <artifactId>mall-entity</artifactId>
+                <version>${mall-entity.version}</version>
             </dependency>
             <!--MyBatis分页插件starter-->
             <dependency>
@@ -146,15 +149,16 @@
             </dependency>
             <!-- MyBatis 生成器 -->
             <dependency>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
-                <version>${mybatis-generator.version}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
             </dependency>
-            <!-- MyBatis-->
+            <!-- MyBatis Plus-->
             <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
             </dependency>
             <!--Mysql数据库驱动-->
             <dependency>
@@ -203,6 +207,12 @@
                 <groupId>io.minio</groupId>
                 <artifactId>minio</artifactId>
                 <version>${minio.version}</version>
+            </dependency>
+            <!-- Velocity -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity-engine-core.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
