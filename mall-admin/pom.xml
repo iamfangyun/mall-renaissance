@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.renaissance</groupId>
-            <artifactId>mall-mbg</artifactId>
+            <artifactId>mall-entity</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
