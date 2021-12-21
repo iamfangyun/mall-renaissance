@@ -12,7 +12,7 @@
     <modules>
         <module>mall-common</module>
         <module>mall-admin</module>
-        <module>mall-mbg</module>
+        <module>mall-entity</module>
     </modules>
 
     <parent>
