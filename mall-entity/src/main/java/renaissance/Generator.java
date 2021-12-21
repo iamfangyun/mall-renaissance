@@ -15,21 +15,28 @@ public class Generator {
     private static String username = "root";
     private static String password = "password";
     private static String parentPackage = "com.renaissance";
+    private static String author = "Generator";
+    private static String outputDir = "/mall-entity/src/main/java";
 
     public static void main(String[] args) {
         FastAutoGenerator.create(url, username, password)
             .globalConfig(builder -> {
-                builder.author("Generator")
+                builder.author(author)
                     .enableSwagger()
                     .fileOverride()
                     .disableOpenDir()
-                    .outputDir(System.getProperty("user.dir")+"/mall-entity/src/main/java");
+                    .outputDir(System.getProperty("user.dir")+outputDir);
             })
             .packageConfig(builder -> {
                 builder.parent(parentPackage);
             })
             .templateConfig(builder -> {
                 builder.disable(TemplateType.SERVICE, TemplateType.SERVICEIMPL, TemplateType.CONTROLLER, TemplateType.XML);
+            })
+            .strategyConfig(builder -> {
+                builder.entityBuilder()
+                    .disableSerialVersionUID()
+                    .enableLombok();
             })
             .execute();
     }
